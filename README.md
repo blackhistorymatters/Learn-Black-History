@@ -71,3 +71,21 @@
     - Every time a feature is satisfied.
   - How will you communicate that it’s time to merge?
     - We will speak up to everyone in the group to make sure we are all on the same page.
+
+
+[Software Requirements](requirements.md)
+## Domain Model
+
+ ![Domain Model](./images/domainModel.png)
+
+## Wireframe
+
+![Wireframe](./images/wireframe.png)
+
+## Schema Diagram
+
+![Schema Diagram](./images/SchemaModel.png)
+
+## Project Management
+
+[Learn Black History Trello Board](https://trello.com/b/v7wIQYZ5/learn-black-history-planning)

@@ -56,19 +56,17 @@ List the functionality of your product. This will consist of tasks such as the f
 
 ## Data Flow
 
-  1. User hits landing page where nav bar is displaying a 'Home' link, a 'Profile' link if logged in, and an 'About Us' link.
+  1. User hits landing page where nav bar is displaying a 'Home' link as well as an 'About Us' link, and 'Profile' & 'Facts' links if logged in.
   2. Landing page renders a card with a button to generate a random fact and a button to allow user to sign up/create profile, as well as a 'Login' button.
   3. If user selects random fact, button sends request to backend, which then conducts an API call to render a randomly generated fact.
-  4. If user selects option to sign up, the Auth0 login is rendered and once submitted, user is routed to their profile page.
-  5. Once logged in, user is given option to search for facts by tags or people and a 'Logout' button is rendered at the bottom of the page.
+  4. If user selects option to sign up, the Auth0 login is rendered and once submitted, user is routed to their profile page, which will a render carousel displaying random facts and they are given the option travel to the 'Facts' page.
+  5. Once logged in, user is given option to search for facts by tags or people via a dropdown menu on the 'Facts' page and a 'Logout' button is rendered at the bottom of the page.
   6. Facts are rendered as cards, displaying the name, image, and content of the fact, along with a star/heart to "like" the fact and save it to their profile.
-  7. Once a fact is saved to a user's profile, they are given the option to remove the fact or update it within their personal profile.
-  8. If the user chooses the 'About-Us' link, a page will render containing biographical information and furhter explanation about the application.
+  7. Once a fact is saved to a user's profile, it is rednered in a carousel, and they are given the option to remove the fact or update it within their personal profile.
+  8. If the user chooses the 'About-Us' link, a page will render containing biographical information and further explanation about the application.
   9. *STRETCH*: User is given the ability to create a new fact that will be validated and approved by the third party API.
-  
- 
 
-# Non-Functional Requirements (301 & 401 only)
+# Non-Functional Requirements
 
 Non-functional requirements are requirements that are not directly related to the functionality of the application but still important to the app.
 
