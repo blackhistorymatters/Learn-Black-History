@@ -1,24 +1,25 @@
 import React from 'react';
+import { withAuth0 } from '@auth0/auth0-react';
+import LogoutButton from './LogoutButton';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
-import Profile from './ProfilePage';
-import About from './AboutPage';
+import ProfilePage from './ProfilePage';
+import AboutPage from './AboutPage';
 import LandingPage from './LandingPage';
-import LoginPage from './LoginPage';
+import LoginButton from './LoginButton';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Redirect
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
 } from "react-router-dom";
 import FactsPage from './FactsPage';
 
-class App extends React.Component{
 
-  constructor(
-    props
-  ){
+class App extends React.Component {
+
+  constructor(props) {
     super(props);
     this.state = {
       user: null,
@@ -37,27 +38,27 @@ class App extends React.Component{
     })
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <>
         <Router>
-          <Header user={this.state.user} onLogout={this.logoutHandler} />
+          <Header user={this.props.auth0.isAuthenticated} logoutHandler={this.logoutHandler} />
+
           <Switch>
-            <Route exact path="/">
-              <LandingPage/>
+            <Route exact path='/'>
+              <LandingPage />
+              <LoginButton />
+              {/* <LogoutButton /> */}
             </Route>
-            <Route path="/profile" >
-              {this.state.user ? <Profile user={this.state.user} /> : <Redirect to="/login" /> }
-              <Profile user={this.state.user} />
+            <Route exact path="/profile" >
+              {/* {this.state.user ? <ProfilePage user={this.state.user} /> : <Redirect to="/" />} */}
+              <ProfilePage user={this.state.user} />
             </Route>
-            <Route path="/about" >
-              <About />
+            <Route exact path="/about" >
+              <AboutPage />
             </Route>
-            <Route path="/facts" >
-              {this.state.user ? <FactsPage user={this.state.user} /> : <Redirect to="/login" /> }
-            </Route>
-            <Route path="/login">
-              {this.state.user ? <Profile user={this.state.user} /> : <LoginPage onLogin={this.loginHandler} />}
+            <Route exact path="/facts" >
+              <FactsPage user={this.state.user} />
             </Route>
           </Switch>
           <Footer />
@@ -67,4 +68,4 @@ class App extends React.Component{
   }
 }
 
-export default App;
+export default withAuth0(App);
