@@ -1,20 +1,23 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
+import { withAuth0 } from '@auth0/auth0-react';
+import CreateData from './RenderData';
 
 class ProfilePage extends React.Component {
 
   render() {
-
-    if (this.props.user) {
+ 
+    if (this.props.auth0.user) {
 
       return (
         <>
-          <h2>{this.props.user.username}</h2>
-          <p>{this.props.user.email}</p>
+          <h2>{this.props.auth0.user.name}</h2>
+          <p>{this.props.auth0.user.email}</p>
           <p>
                 This is the profile page!
           </p>
-          {/* TODO: add stuff from the wireframe, above is filler */}
+             <CreateData />
+             {/* TODO: add stuff from the wireframe, above is filler */}
         </>
       );
 
@@ -24,4 +27,4 @@ class ProfilePage extends React.Component {
   }
 };
 
-export default ProfilePage;
+export default withAuth0(ProfilePage);
