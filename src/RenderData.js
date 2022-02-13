@@ -31,7 +31,7 @@ class CreateData extends React.Component {
       const factsResponse = await axios(config);
       console.log(factsResponse.data);
 
-      this.setState({ facts: factsResponse.data });
+      this.props.factsArrayHandler(factsResponse.data);
 
     }
   }

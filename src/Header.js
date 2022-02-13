@@ -1,7 +1,8 @@
 import React from 'react'
 import { Navbar, NavItem} from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import LogoutButton from './LogoutButton'
+import LogoutButton from './LogoutButton';
+import LoginButton from './LoginButton';
 
 class Header extends React.Component {
     render() {
@@ -17,7 +18,7 @@ class Header extends React.Component {
               <NavItem><Link to="/facts" className="nav-link">Facts</Link></NavItem>
               <LogoutButton logoutHandler={this.props.logoutHandler} />
             </>
-          ) : <></>}
+          ) : <><LoginButton /></>}
         </Navbar>
       )
     }
