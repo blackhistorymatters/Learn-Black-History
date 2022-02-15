@@ -9,7 +9,7 @@ import LoginButton from './LoginButton';
 class Header extends React.Component {
     render() {
       return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar id="navbar" collapseOnSelect expand="lg" >
           <Navbar.Brand>Learn Black History</Navbar.Brand>
           <NavItem><Link to="/" className="nav-link">Home</Link></NavItem>
           <NavItem><Link to="/about" className="nav-link">About</Link></NavItem>
