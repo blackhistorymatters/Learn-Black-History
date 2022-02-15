@@ -11,12 +11,14 @@ class FactsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      user: null,
       tagList: [],
       peopleList: [],
       selectedTag: '',
       selectedPerson: '',
       factByTag: [],
-      factByPerson: []
+      factByPerson: [],
+      userFavArr: []
     }
   }
 
@@ -96,7 +98,39 @@ class FactsPage extends React.Component {
     console.log('This is a person', this.state.factByPerson);
   }
 
-    
+  // createFact = async (factPeople, factText, factSource) => {
+  //   if (this.props.auth0.isAuthenticated) {
+  //     const res = await this.props.auth0.getIdTokenClaims();
+  //     const jwt = res.__raw;
+  //     console.log("jwt: ", jwt);
+  //     let newFact = {
+  //       people: factPeople,
+  //       text: factText,
+  //       source: factSource,
+  //     }
+  //     console.log('New fact being created (location factspage.js) FROM FORM unless otherwise specified', newFact);
+  //     const config = {
+  //       headers: { "Authorization": `Bearer ${jwt}` },
+  //       params: { email: this.props.auth0.user.email },
+  //       method: 'post',
+  //       baseURL: process.env.REACT_APP_SERVER,
+  //       url: `/userfacts`,
+  //       data: newFact
+  //     }
+  //     const createResponse = await axios(config);
+  //     console.log(createResponse.data);
+  //     let newFavArr = this.state.userFavArr;
+  //     newFavArr.push(newFact);
+  //     this.setState({ userFavArr: newFavArr })
+  //   } else {
+  //     console.error("Invalid authentification.")
+  //   }
+  // }
+
+  // personFactFavorite = async (fact) => {
+  //   console.log('New fact being created by FAVORITING', fact);
+  //   await this.createFact(fact.people, fact.text, fact.source);
+  // }
 
   render() {
     return (
@@ -137,7 +171,7 @@ class FactsPage extends React.Component {
                 {person.text}
                 </Card.Text>
               </Card.Body>
-              <Button>Add to Favorites!</Button>
+              <Button onClick={this.personFactFavorite}>Add to Favorites!</Button>
               </Card>
      ))}
 
@@ -164,4 +198,4 @@ class FactsPage extends React.Component {
   }
 };
 
-export default FactsPage;
+export default withAuth0(FactsPage);

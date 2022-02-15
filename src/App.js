@@ -140,9 +140,9 @@ class App extends React.Component {
     }
   }
 
-  createFactFromFavorite = async (fact) => {
+  personFactFavorite = async (fact) => {
     console.log('New fact being created by FAVORITING', fact);
-    this.createFact(fact.people, fact.text, fact.source);
+    await this.createFact(fact.people, fact.text, fact.source);
   }
 
   async componentDidMount() {
