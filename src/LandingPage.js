@@ -14,9 +14,9 @@ class LandingPage extends React.Component {
             <>
                 {console.log('random fact logged from landingpage: ', this.props.randomFact)}
                 <Container>
-                    <Card style={{ width: '18rem' }} key={"key"}>
+                    <Card id="landingCard" style={{ width: '18rem' }} key={"key"}>
                         <Card.Img src="https://www.liberty.edu/champion/wp-content/uploads/2014/02/Untitled-151.jpg" alt="placeholder image" />
-                        <Card.Body>
+                        <Card.Body id="cardBackground">
                             <Card.Title>
                                 {this.props.randomFact.people[0]}
                             </Card.Title>
@@ -25,7 +25,7 @@ class LandingPage extends React.Component {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Button onClick={this.props.generateRandomFact}>Generate New Fact</Button>
+                    <Button id="defaultButton" onClick={this.props.generateRandomFact}>Generate New Fact</Button>
                 </Container>
                 {/* TODO: add stuff from the wireframe, above is filler */}
             </>

@@ -73,19 +73,19 @@ class ProfilePage extends React.Component {
     if (this.props.auth0.user) {
       return (
         <>
-          <h2>{this.props.auth0.user.name}</h2>
-          <p>{this.props.auth0.user.email}</p>
+          <h2>Welcome, {this.props.auth0.user.name}!</h2>
           {/* <p>
                 This is the profile page!
           </p> */}
           {/* <CreateData /> */}
           {/* TODO: add stuff from the wireframe, above is filler */}
-
+          <div id="profilePageC1">
           <h2>Random facts:</h2>
-          <Carousel style={{ width: '30rem' }}>
+          <Carousel id="carouselColor" style={{ width: '30rem' }}>
             {this.props.randomFactsArray.map((fact, idx) => (
               <Carousel.Item key={idx}>
                 <img
+                id="carouselImg"
                   className="d-block w-100"
                   src="https://www.liberty.edu/champion/wp-content/uploads/2014/02/Untitled-151.jpg"
                   alt="Placeholder"
@@ -103,8 +103,9 @@ class ProfilePage extends React.Component {
             ))
             }
           </Carousel>
+          
           <h2>Your favorited facts:</h2>
-          <Carousel style={{ width: '30rem' }}>
+          <Carousel id="carouselColor" style={{ width: '30rem' }}>
             {console.log('User facts array: ', this.props.userFactsArray)}
             {this.props.userFactsArray.map((fact, idx) => (
               <Carousel.Item key={idx}>
@@ -130,9 +131,10 @@ class ProfilePage extends React.Component {
             ))
             }
           </Carousel>
-
-          <Button id="button" onClick={this.handleCreateOpen}>Create a new Fact</Button>
-
+         
+          <Button id="profileButton" onClick={this.handleCreateOpen}>Create a new Fact</Button>
+          </div>
+          
           {/* UPDATE MODAL */}
           <Modal show={this.state.updateModalShow} onHide={this.handleUpdateClose}>
             <Modal.Header closeButton>

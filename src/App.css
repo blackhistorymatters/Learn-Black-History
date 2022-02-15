@@ -1,3 +1,9 @@
+/* Red: #BF0A2B
+Green: #29A655
+Yellow: #F2CB07
+Brown: #A64F03
+Black: #0D0D0D */
+
 .App {
   text-align: center;
 }
@@ -48,9 +54,76 @@
   color: #0D0D0D;
 }
 
+#cardBackground {
+  background-color: #29A655;
+  
+}
+
 #button {
   background-color: #0D0D0D;
   border-color:#0D0D0D ;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   margin: 10px;
 }
+
+#navbar {
+  background-color: #0D0D0D;
+
+}
+
+#navbar span {
+  color: white;
+  background-color: #A64F03;
+  border-color:#A64F03 ;
+  padding: 5px;
+  border-radius: 5px;
+} 
+
+div .nav-link {
+  color: white;
+}
+
+#defaultButton {
+  background-color: #A64F03;
+  border-color:#A64F03 ;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 10px;
+}
+
+#landingCard {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-color:#0D0D0D;
+  border-width: 2px;
+}
+
+#carouselImg {
+  opacity: 35%;
+}
+#profilePageC1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#carouselColor {
+  background-color: #29A655;
+}
+
+#profilePageC1  #carouselColor, h2 {
+  /* margin: 0 auto; */
+  text-align: center;
+
+}
+
+#profileButton {
+  background-color: #0D0D0D;
+  border-color:#0D0D0D ;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  align-items: center;
+}
+
+
+
+
+
