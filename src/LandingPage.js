@@ -15,7 +15,7 @@ class LandingPage extends React.Component {
                 {console.log('random fact logged from landingpage: ', this.props.randomFact)}
                 <Container>
                     <Card style={{ width: '18rem' }} key={"key"}>
-                        <Card.Img src="https://via.placeholder.com/150" alt="placeholder image" />
+                        <Card.Img src="https://www.liberty.edu/champion/wp-content/uploads/2014/02/Untitled-151.jpg" alt="placeholder image" />
                         <Card.Body>
                             <Card.Title>
                                 {this.props.randomFact.people[0]}

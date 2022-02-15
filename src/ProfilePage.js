@@ -87,11 +87,11 @@ class ProfilePage extends React.Component {
               <Carousel.Item key={idx}>
                 <img
                   className="d-block w-100"
-                  src="https://via.placeholder.com/150"
+                  src="https://www.liberty.edu/champion/wp-content/uploads/2014/02/Untitled-151.jpg"
                   alt="Placeholder"
                 />
                 <Carousel.Caption>
-                  <h3>{fact.people}</h3>
+                  <h3>{fact.people ? fact.people[0] : ''}</h3>
                   <p>{fact.text}</p>
                   <p><a href={fact.source}>Source</a></p>
                 </Carousel.Caption>
@@ -106,11 +106,11 @@ class ProfilePage extends React.Component {
               <Carousel.Item key={idx}>
                 <img
                   className="d-block w-100"
-                  src="https://via.placeholder.com/150"
+                  src="https://www.liberty.edu/champion/wp-content/uploads/2014/02/Untitled-151.jpg"
                   alt="Placeholder"
                 />
                 <Carousel.Caption>
-                  <h3>{fact.people}</h3>
+                  <h3>{fact.people ? fact.people : ''}</h3>
                   <p>{fact.text}</p>
                   <p><a href={fact.source}>Source</a></p>
                   <Button onClick={() => this.props.removeFact(fact)}>
