@@ -10,6 +10,7 @@ import LandingPage from './LandingPage';
 import LoginButton from './LoginButton';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Modal, Card, Button } from 'react-bootstrap';
 
 import {
   BrowserRouter as Router,
@@ -29,6 +30,8 @@ class App extends React.Component {
       randomFactsArray: [{ people: ['Something broke'], text: 'Escape!' }],
       randomFact: { people: ['Fact is loading'], text: 'Please wait...' },
       userFactsArray: [{ people: 'Something is wrong', text: 'with userFactsArray...' }],
+      addFactConfirmModal: false,
+      addedFact: { people: ['loading'], tags: ['loading'], text: 'loading', source: 'loading' },
     }
   }
 
@@ -51,7 +54,7 @@ class App extends React.Component {
       //   newFactsArray = [newFactsArray];
       // }
       console.log('Got user facts: facts array: ', newFactsArray);
-      await this.setState({userFactsArray: newFactsArray});
+      await this.setState({ userFactsArray: newFactsArray });
     } else {
       console.error("Invalid authentification.")
     }
@@ -140,9 +143,10 @@ class App extends React.Component {
     }
   }
 
-  personFactFavorite = async (fact) => {
+  createFactFromFavorite = async (fact) => {
     console.log('New fact being created by FAVORITING', fact);
-    await this.createFact(fact.people, fact.text, fact.source);
+    this.setState({ addedFact: fact, addFactConfirmModal: true });
+    await this.createFact(fact.people[0], fact.text, fact.source);
   }
 
   async componentDidMount() {
@@ -193,6 +197,13 @@ class App extends React.Component {
     })
   }
 
+  addFactConfirmModalClose = () => {
+    this.setState({ addFactConfirmModal: false })
+  }
+
+  addFactConfirmModalOpen = () => {
+    this.setState({ addFactConfirmModal: true })
+  }
 
   //Routing and rendering/parenting pages, passing props and methods to them
   render() {
@@ -210,18 +221,42 @@ class App extends React.Component {
             </Route>
             <Route exact path="/profile" >
               {/* {this.state.user ? <ProfilePage user={this.state.user} /> : <Redirect to="/" />} */}
-              <ProfilePage user={this.state.user} randomFactsArray={this.state.randomFactsArray} createFact={this.createFact} getUserFacts={this.getUserFacts} removeFact={this.removeFact} userFactsArray={this.state.userFactsArray} updateFact = {this.updateFact}/>
+              <ProfilePage user={this.state.user} randomFactsArray={this.state.randomFactsArray} createFact={this.createFact} getUserFacts={this.getUserFacts} removeFact={this.removeFact} userFactsArray={this.state.userFactsArray} updateFact={this.updateFact} />
 
             </Route>
             <Route exact path="/about" >
               <AboutPage />
             </Route>
             <Route exact path="/facts" >
-              <FactsPage user={this.state.user} />
+              <FactsPage user={this.state.user} createFactFromFavorite={this.createFactFromFavorite} />
             </Route>
           </Switch>
           <Footer />
         </Router>
+        <Modal show={this.state.addFactConfirmModal} onHide={this.addFactConfirmModalClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>
+              <h2>Fact was added to favorties!</h2>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Card>
+              <Card style={{ width: '18rem' }}>
+                <Card.Body>
+                  <Card.Title>
+                    <h3>{this.state.addedFact.people ? this.state.addedFact.people[0] : this.state.addedFact.tags[0]}</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    {this.state.addedFact.text}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Card>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="info" onClick={this.addFactConfirmModalClose}>Close</Button>
+          </Modal.Footer>
+        </Modal>
       </>
       </div>
     );
