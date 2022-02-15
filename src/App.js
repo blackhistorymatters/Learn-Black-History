@@ -18,7 +18,7 @@ import {
   Redirect
 } from "react-router-dom";
 import FactsPage from './FactsPage';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
 
