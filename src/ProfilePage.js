@@ -11,7 +11,7 @@ class ProfilePage extends React.Component {
 
       return (
         <>
-          <h2>{this.props.auth0.user.name}</h2>
+          <h2 id="footer">{this.props.auth0.user.name}</h2>
           <p>{this.props.auth0.user.email}</p>
           <p>
                 This is the profile page!
