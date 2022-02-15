@@ -91,8 +91,8 @@ class ProfilePage extends React.Component {
                   alt="Placeholder"
                 />
                 <Carousel.Caption>
-                  <h3>{fact.people}</h3>
-                  <p>{fact.text}</p>
+                  <h3 id="cardText">{fact.people}</h3>
+                  <p id="cardText">{fact.text}</p>
                   <p><a href={fact.source}>Source</a></p>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -110,13 +110,13 @@ class ProfilePage extends React.Component {
                   alt="Placeholder"
                 />
                 <Carousel.Caption>
-                  <h3>{fact.people}</h3>
-                  <p>{fact.text}</p>
+                  <h3 id="cardText">{fact.people}</h3>
+                  <p id="cardText">{fact.text}</p>
                   <p><a href={fact.source}>Source</a></p>
-                  <Button onClick={() => this.props.removeFact(fact)}>
+                  <Button id="button" onClick={() => this.props.removeFact(fact)}>
                     Delete fact
                   </Button>
-                  <Button onClick={() => this.handleUpdate(fact)}>
+                  <Button id="button" onClick={() => this.handleUpdate(fact)}>
                     Update button
                   </Button>
                 </Carousel.Caption>
@@ -125,7 +125,7 @@ class ProfilePage extends React.Component {
             }
           </Carousel>
 
-          <Button onClick={this.handleCreateOpen}>Create a new Fact</Button>
+          <Button id="button" onClick={this.handleCreateOpen}>Create a new Fact</Button>
 
           {/* UPDATE MODAL */}
           <Modal show={this.state.updateModalShow} onHide={this.handleUpdateClose}>
@@ -144,14 +144,14 @@ class ProfilePage extends React.Component {
                     <Form.Label>Source</Form.Label>
                     <Form.Control type="name" placeholder="Enter your source" value={this.state.factToUpdate.source} onChange={this.handleSourceChange} />
                   </Form.Group>
-                  <Button variant="primary" type="submit">
+                  <Button id="button" variant="primary" type="submit">
                     Submit
                   </Button>
                 </Form>
               </Modal.Body>
             </Modal.Header>
             <Modal.Footer>
-              <Button variant="info" onClick={this.handleUpdateClose}>Close</Button>
+              <Button id="button" variant="info" onClick={this.handleUpdateClose}>Close</Button>
             </Modal.Footer>
           </Modal>
 
@@ -172,7 +172,7 @@ class ProfilePage extends React.Component {
                     <Form.Label>Source</Form.Label>
                     <Form.Control type="name" placeholder="Enter your source" />
                   </Form.Group>
-                  <Button variant="primary" type="submit">
+                  <Button  id="button" variant="primary" type="submit">
                     Submit
                   </Button>
                 </Form>
