@@ -208,7 +208,7 @@ class App extends React.Component {
   //Routing and rendering/parenting pages, passing props and methods to them
   render() {
     return (
-      <div id="body">
+      <div id="body" >
       <>
         <Router>
           <Header user={this.props.auth0.isAuthenticated} logoutHandler={this.logoutHandler} loginHandler={this.loginHandler} />

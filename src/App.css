@@ -4,6 +4,11 @@ Yellow: #F2CB07
 Brown: #A64F03
 Black: #0D0D0D */
 
+/* * {
+  background-color:#F2CB07 ;
+} */
+
+
 .App {
   text-align: center;
 }
@@ -42,12 +47,13 @@ Black: #0D0D0D */
     transform: rotate(360deg);
   }
 }
-#footer{
-  background-color: #BF0A2B ;
-}
+
 
 #body {
   background-color: #F2CB07;
+  min-height: 100vh;
+
+ 
 }
 
 #cardText {
@@ -95,24 +101,30 @@ div .nav-link {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border-color:#0D0D0D;
   border-width: 2px;
+  /* margin: 100px; */
 }
 
 #carouselImg {
-  opacity: 35%;
+  opacity: 40%;
 }
 #profilePageC1 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 30px;
 }
 
 #carouselColor {
-  background-color: #29A655;
+  background-color: gray;
+ 
 }
 
-#profilePageC1  #carouselColor, h2 {
+#profilePageC1, #carouselColor {
   
   text-align: center;
+  margin-bottom: 50px;
+  
 
 }
 
@@ -122,6 +134,60 @@ div .nav-link {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   align-items: center;
 }
+
+ 
+#landingcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+}
+
+
+
+#factCard {
+  margin-bottom:10px;
+  position: sticky;
+  top: 50px;
+}
+
+#footer{
+  background-color: #BF0A2B ;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;  
+  margin-top: 2.5rem; 
+  
+}
+
+/* #factContainer, h2 {
+  
+  align-self: center;
+} */
+
+#rf {
+  position: absolute;
+  top: 75px;
+  left: 550px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+#ff {
+  position: absolute;
+  top: 75px;
+  right: 500px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
 
 
 

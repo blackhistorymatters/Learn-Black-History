@@ -2,7 +2,8 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import { withAuth0 } from '@auth0/auth0-react';
 import CreateData from './RenderData';
-import { Modal, Form, Button, Carousel } from "react-bootstrap";
+import { Modal, Form, Button, Carousel, Container} from "react-bootstrap";
+
 
 
 class ProfilePage extends React.Component {
@@ -73,21 +74,23 @@ class ProfilePage extends React.Component {
     if (this.props.auth0.user) {
       return (
         <>
-          <h2>Welcome, {this.props.auth0.user.name}!</h2>
+          <h2 className="welcome">Welcome, {this.props.auth0.user.name}!</h2>
           {/* <p>
                 This is the profile page!
           </p> */}
           {/* <CreateData /> */}
           {/* TODO: add stuff from the wireframe, above is filler */}
           <div id="profilePageC1">
-          <h2>Random facts:</h2>
+          
+          {/* <Container id="factContainer"> */}
+          <h2 id="rf">Random facts:</h2>
           <Carousel id="carouselColor" style={{ width: '30rem' }}>
             {this.props.randomFactsArray.map((fact, idx) => (
               <Carousel.Item key={idx}>
                 <img
                 id="carouselImg"
                   className="d-block w-100"
-                  src="https://www.liberty.edu/champion/wp-content/uploads/2014/02/Untitled-151.jpg"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Ethiopia_%281975%E2%80%931987%29.svg/1280px-Flag_of_Ethiopia_%281975%E2%80%931987%29.svg.png"
                   alt="Placeholder"
                 />
                 <Carousel.Caption>
@@ -103,15 +106,17 @@ class ProfilePage extends React.Component {
             ))
             }
           </Carousel>
-          
-          <h2>Your favorited facts:</h2>
+          {/* </Container>  
+          <Container id="factContainer"> */}
+          <h2 id="ff">Your favorited facts:</h2>
           <Carousel id="carouselColor" style={{ width: '30rem' }}>
             {console.log('User facts array: ', this.props.userFactsArray)}
             {this.props.userFactsArray.map((fact, idx) => (
               <Carousel.Item key={idx}>
                 <img
                   className="d-block w-100"
-                  src="https://www.liberty.edu/champion/wp-content/uploads/2014/02/Untitled-151.jpg"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Ethiopia_%281975%E2%80%931987%29.svg/1280px-Flag_of_Ethiopia_%281975%E2%80%931987%29.svg.png"
+    
                   alt="Placeholder"
                 />
                 <Carousel.Caption>
@@ -131,9 +136,9 @@ class ProfilePage extends React.Component {
             ))
             }
           </Carousel>
-         
-          <Button id="profileButton" onClick={this.handleCreateOpen}>Create a new Fact</Button>
-          </div>
+          {/* </Container> */}
+        </div>
+        <Button id="profileButton" onClick={this.handleCreateOpen}>Create a new Fact</Button>
           
           {/* UPDATE MODAL */}
           <Modal show={this.state.updateModalShow} onHide={this.handleUpdateClose}>
