@@ -4,6 +4,8 @@ import axios from 'axios';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 
 class FactsPage extends React.Component {
@@ -132,6 +134,7 @@ class FactsPage extends React.Component {
     render() {
         return (
             <>
+            <Container id="factContainer">
                 <Form>
                     <Form.Label>Category Selection</Form.Label>
                     <Form.Select onChange={this.handleTagChange} >
@@ -154,10 +157,12 @@ class FactsPage extends React.Component {
                         ))}
                     </Form.Select>
                 </Form>
-
+                </Container>
+                <Container id="factContainer">
+                <Row sm={2} md={6} lg={10} className="g-4">
                 {this.state.displayedFacts.map((fact, idx) => (
-
-                    <Card style={{ width: '18rem' }} key={idx}>
+                    
+                    <Card style={{ width: '18rem', paddingBottom: '1rem', height: '22rem', overflow: 'auto' }} key={idx} id="factCard">
                         <Card.Body>
                             <Card.Title>
                                 <h3>{fact.people ? fact.people[0] : this.state.selectedTag}</h3>
@@ -168,8 +173,10 @@ class FactsPage extends React.Component {
                         </Card.Body>
                         <Button onClick={() => this.props.createFactFromFavorite(fact)}>Add to Favorites!</Button>
                     </Card>
+                    
                 ))}
-
+                </Row>
+                </Container>
                 {
                 //this.state.displayedFacts.map((tagName, idx) => (
 
