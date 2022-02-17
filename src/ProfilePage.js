@@ -98,8 +98,8 @@ class ProfilePage extends React.Component {
 
              
 
-                  <h3 id="cardText">{fact.people ? fact.people[0] : ''}</h3>
-                  <p id="cardText">{fact.text}</p>
+                  <h3 className="cardText">{fact.people ? fact.people[0] : ''}</h3>
+                  <p className="cardText">{fact.text}</p>
 
                   <p><a href={fact.source}>Source</a></p>
                 </Carousel.Caption>
@@ -126,8 +126,8 @@ class ProfilePage extends React.Component {
                 />
                 <Carousel.Caption>
 
-                  <h3 id="cardText">{fact.people ? fact.people : ''}</h3>
-                  <p id="cardText">{fact.text}</p>
+                  <h3 className="cardText">{fact.people ? fact.people : ''}</h3>
+                  <p className="cardText">{fact.text}</p>
 
                   <p><a href={fact.source}>Source</a></p>
                   <Button className="carouselCardButton" onClick={() => this.props.removeFact(fact)}>
