@@ -1,7 +1,7 @@
 import React from 'react';
 import { withAuth0 } from '@auth0/auth0-react';
 import LogoutButton from './LogoutButton';
-import './App.css';
+
 import Header from './Header';
 import Footer from './Footer';
 import ProfilePage from './ProfilePage';
@@ -10,6 +10,7 @@ import LandingPage from './LandingPage';
 import LoginButton from './LoginButton';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 import { Modal, Card, Button } from 'react-bootstrap';
 
 import {

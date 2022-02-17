@@ -25,7 +25,7 @@ class LandingPage extends React.Component {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Button id="defaultButton" onClick={this.props.generateRandomFact}>Generate New Fact</Button>
+                    <button className="defaultButton" onClick={this.props.generateRandomFact}>Generate New Fact</button>
                 </Container>
                 
             </>
