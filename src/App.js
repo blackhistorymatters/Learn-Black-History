@@ -1,13 +1,13 @@
 import React from 'react';
 import { withAuth0 } from '@auth0/auth0-react';
-import LogoutButton from './LogoutButton';
+// import LogoutButton from './LogoutButton';
 
 import Header from './Header';
 import Footer from './Footer';
 import ProfilePage from './ProfilePage';
 import AboutPage from './AboutPage';
 import LandingPage from './LandingPage';
-import LoginButton from './LoginButton';
+// import LoginButton from './LoginButton';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -17,7 +17,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  // Redirect
 } from "react-router-dom";
 import FactsPage from './FactsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -40,8 +40,7 @@ class App extends React.Component {
     if (this.props.auth0.isAuthenticated) {
       const res = await this.props.auth0.getIdTokenClaims();
       const jwt = res.__raw;
-      console.log("jwt: ", jwt);
-      console.log('Facts being rendered (location app.js)',);
+     
       const config = {
         headers: { "Authorization": `Bearer ${jwt}` },
         params: { email: this.props.auth0.user.email },
@@ -51,9 +50,7 @@ class App extends React.Component {
       }
       let newFactsArray = await axios(config);
       newFactsArray = newFactsArray.data;
-      // if(!Array.isArray(newFactsArray)){
-      //   newFactsArray = [newFactsArray];
-      // }
+    
       console.log('Got user facts: facts array: ', newFactsArray);
       await this.setState({ userFactsArray: newFactsArray });
     } else {
@@ -66,8 +63,7 @@ class App extends React.Component {
     if (this.props.auth0.isAuthenticated) {
       const res = await this.props.auth0.getIdTokenClaims();
       const jwt = res.__raw;
-      console.log("jwt: ", jwt);
-      console.log('Fact being removed (location app.js)', fact);
+      
       const id = fact._id;
       let factsArray = this.state.userFactsArray;
       factsArray = this.state.userFactsArray.filter(f => f._id !== id);
@@ -90,7 +86,7 @@ class App extends React.Component {
     if (this.props.auth0.isAuthenticated) {
       const res = await this.props.auth0.getIdTokenClaims();
       const jwt = res.__raw;
-      console.log("jwt: ", jwt);
+      
       let newFact = {
         people: factPeople,
         text: factText,
@@ -119,14 +115,14 @@ class App extends React.Component {
     if (this.props.auth0.isAuthenticated) {
       const res = await this.props.auth0.getIdTokenClaims();
       const jwt = res.__raw;
-      console.log("jwt: ", jwt);
+      
       let updatedFact = {
         people: factPeople,
         text: factText,
         source: factSource,
         _id: fact._id
       }
-      console.log('New fact being updated (location app.js)', updatedFact, fact);
+      
       const config = {
         headers: { "Authorization": `Bearer ${jwt}` },
         params: { email: this.props.auth0.user.email },
