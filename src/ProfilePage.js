@@ -1,8 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import { withAuth0 } from '@auth0/auth0-react';
-import CreateData from './RenderData';
-import { Modal, Form, Button, Carousel, Container} from "react-bootstrap";
+import { Modal, Form, Button, Carousel} from "react-bootstrap";
 
 
 
