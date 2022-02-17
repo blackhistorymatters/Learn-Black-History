@@ -1,0 +1,306 @@
+/* Red: #BF0A2B
+Green: #29A655
+Yellow: #F2CB07
+Brown: #A64F03
+Black: #0D0D0D */
+
+/* * {
+  background-color:#F2CB07 ;
+} */
+
+
+.App {
+  text-align: center;
+  
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #0D0D0D;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body {
+  background-color: #F2CB07;
+  min-height: 100vh;
+
+ 
+}
+
+.cardText {
+  color: #0D0D0D;
+}
+
+#cardBackground {
+  background-color: #29A655;
+  
+}
+
+.carouselCardButton {
+  background-color: #0D0D0D;
+  border-color:#0D0D0D ;
+  
+  margin: 10px;
+}
+
+.carouselCardButton:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #0D0D0D;
+  border-color:#0D0D0D;
+}
+
+.carouselCardButton:focus {
+  background-color: #0D0D0D;
+  border-color:#0D0D0D;
+}
+.cardButton {
+  background-color: #0D0D0D;
+  border-color:#0D0D0D;
+  
+  margin: 10px;
+}
+
+.cardButton:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #0D0D0D;
+  border-color:#0D0D0D;
+}
+
+.cardButton:focus {
+  
+  background-color: #29A655;
+  border-color:#29A655 ;
+}
+#navbar {
+  background-color: #0D0D0D;
+
+}
+
+#navbar span {
+  color: white;
+  background-color: #A64F03;
+  border-color:#A64F03 ;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-family: 'Oswald', sans-serif;
+} 
+
+div .nav-link {
+  color: white;
+}
+
+.defaultButton {
+  background-color: #A64F03;
+  border-color:#A64F03 ;
+  color: white;
+  border-radius: 10px;
+  margin: 10px;
+  
+  font-family: 'Oswald', sans-serif;
+}
+
+.defaultButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#logoutButton {
+  background-color: #A64F03;
+  border-color:#A64F03 ;
+  color: white;
+  border-radius: 10px;
+  margin: 10px;
+  
+}
+
+
+#landingCard {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-color:#0D0D0D;
+  border-width: 2px;
+  margin-top: 25px;
+  
+}
+
+#carouselImg {
+  opacity: 40%;
+  
+}
+
+.carouselStyle {
+  border-radius: 5px;
+}
+#profilePageC1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 30px;
+}
+
+.carouselColor {
+  background-color: gray;
+  
+}
+
+#profilePageC1, .carouselColor {
+  
+  text-align: center;
+  margin: 25px 10px 10px 0;
+
+}
+
+.profileButton {
+  background-color: #0D0D0D;
+  border-color:#0D0D0D ;
+ 
+  align-items: center;
+}
+
+.profileButton:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #0D0D0D;
+  border-color: #0D0D0D;
+}
+
+ 
+#landingcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+}
+
+
+
+#factCard {
+ 
+  position: sticky;
+ padding-top: 20px;
+  margin: 50px 10px 10px 10px;
+}
+
+#footer{
+  background-color: #BF0A2B ;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;  
+  margin-top: 2.5rem; 
+  
+  
+}
+
+
+.welcome {
+  text-align: center;
+  margin: 25px 0 25px 0;
+}
+
+#divHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+}
+
+#profileButtonAlign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+h1, h2, h3 {font-family: 'Bangers', cursive;}
+
+p {font-family: 'Oswald', sans-serif;}
+
+div.aboutPage {
+  display: flex;
+  
+ 
+ 
+  justify-content: center;
+ margin-top: 65px;
+}
+
+.aboutCard {
+  margin: 10px;
+  padding: 3px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#factContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.formLabel {
+  font-family: 'Bangers', cursive;
+}
+
+#factCardText {
+  font-family: 'Oswald', sans-serif;
+}
+
+#formContainer {
+ width: 250px;
+}
+
+#pwidth {
+  max-width: 500px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#landingHeader{
+  margin-top: 25px;
+}
+
+#landingPad {
+  padding: 12px 10px 4px 10px;
+}
+
+.selectPad {
+  padding: 5px 5px;
+}
+
+#footerp {
+  margin: 0px 0px 0px 20px;
+}
