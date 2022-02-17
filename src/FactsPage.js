@@ -97,62 +97,28 @@ class FactsPage extends React.Component {
         console.log('This is a person', this.state.displayedFacts);
     }
 
-    // createFact = async (factPeople, factText, factSource) => {
-    //   if (this.props.auth0.isAuthenticated) {
-    //     const res = await this.props.auth0.getIdTokenClaims();
-    //     const jwt = res.__raw;
-    //     console.log("jwt: ", jwt);
-    //     let newFact = {
-    //       people: factPeople,
-    //       text: factText,
-    //       source: factSource,
-    //     }
-    //     console.log('New fact being created (location factspage.js) FROM FORM unless otherwise specified', newFact);
-    //     const config = {
-    //       headers: { "Authorization": `Bearer ${jwt}` },
-    //       params: { email: this.props.auth0.user.email },
-    //       method: 'post',
-    //       baseURL: process.env.REACT_APP_SERVER,
-    //       url: `/userfacts`,
-    //       data: newFact
-    //     }
-    //     const createResponse = await axios(config);
-    //     console.log(createResponse.data);
-    //     let newFavArr = this.state.userFavArr;
-    //     newFavArr.push(newFact);
-    //     this.setState({ userFavArr: newFavArr })
-    //   } else {
-    //     console.error("Invalid authentification.")
-    //   }
-    // }
-
-    // personFactFavorite = async (fact) => {
-    //   console.log('New fact being created by FAVORITING', fact);
-    //   await this.createFact(fact.people, fact.text, fact.source);
-    // }
-
     render() {
         return (
             <>
-            <Container id="factContainer">
+            <Container id="formContainer">
                 <Form>
-                    <Form.Label>Category Selection</Form.Label>
+                    <Form.Label className="formLabel">Category Selection</Form.Label>
                     <Form.Select onChange={this.handleTagChange} >
                         <option value="none">Make a Selection</option>
                         {this.state.tagList.map((tag, idx) => (
 
-                            <option value={tag.name}>{this.state.tagList[idx].name}</option>
+                            <option value={tag.name} className="selectPad">{this.state.tagList[idx].name}</option>
 
                         ))}
                     </Form.Select>
                 </Form>
                 <Form>
-                    <Form.Label>Person Selection</Form.Label>
-                    <Form.Select onChange={this.handlePeopleChange}>
+                    <Form.Label className="formLabel">Person Selection</Form.Label>
+                    <Form.Select onChange={this.handlePeopleChange} >
                         <option value="none">Make a Selection</option>
                         {this.state.peopleList.map((person, idx) => (
 
-                            <option value={person.name}>{this.state.peopleList[idx].name}</option>
+                            <option value={person.name} className="selectPad">{this.state.peopleList[idx].name}</option>
 
                         ))}
                     </Form.Select>
@@ -168,7 +134,7 @@ class FactsPage extends React.Component {
                             <Card.Title>
                                 <h3>{fact.people ? fact.people[0] : this.state.selectedTag}</h3>
                             </Card.Title>
-                            <Card.Text>
+                            <Card.Text id="factCardText">
                                 {fact.text}
                             </Card.Text>
                         </Card.Body>
