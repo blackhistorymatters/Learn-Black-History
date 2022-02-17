@@ -11,6 +11,7 @@ Black: #0D0D0D */
 
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -49,7 +50,7 @@ Black: #0D0D0D */
 }
 
 
-#body {
+body {
   background-color: #F2CB07;
   min-height: 100vh;
 
@@ -65,13 +66,41 @@ Black: #0D0D0D */
   
 }
 
-#button {
+.carouselCardButton {
   background-color: #0D0D0D;
   border-color:#0D0D0D ;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  
   margin: 10px;
 }
 
+.carouselCardButton:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #0D0D0D;
+  border-color:#0D0D0D;
+}
+
+.carouselCardButton:focus {
+  background-color: #0D0D0D;
+  border-color:#0D0D0D;
+}
+.cardButton {
+  background-color: #0D0D0D;
+  border-color:#0D0D0D;
+  
+  margin: 10px;
+}
+
+.cardButton:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #0D0D0D;
+  border-color:#0D0D0D;
+}
+
+.cardButton:focus {
+  
+  background-color: #29A655;
+  border-color:#29A655 ;
+}
 #navbar {
   background-color: #0D0D0D;
 
@@ -83,29 +112,51 @@ Black: #0D0D0D */
   border-color:#A64F03 ;
   padding: 5px;
   border-radius: 5px;
+  margin-left: 20px;
 } 
 
 div .nav-link {
   color: white;
 }
 
-#defaultButton {
+.defaultButton {
   background-color: #A64F03;
   border-color:#A64F03 ;
   color: white;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 10px;
   margin: 10px;
+  padding: 14px 25px;
 }
+
+.defaultButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#logoutButton {
+  background-color: #A64F03;
+  border-color:#A64F03 ;
+  color: white;
+  border-radius: 10px;
+  margin: 10px;
+  
+}
+
 
 #landingCard {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border-color:#0D0D0D;
   border-width: 2px;
-  /* margin: 100px; */
+  margin-top: 50px;
+  
 }
 
 #carouselImg {
   opacity: 40%;
+  
+}
+
+.carouselStyle {
+  border-radius: 5px;
 }
 #profilePageC1 {
   display: flex;
@@ -115,24 +166,29 @@ div .nav-link {
   margin-top: 30px;
 }
 
-#carouselColor {
+.carouselColor {
   background-color: gray;
- 
+  
 }
 
-#profilePageC1, #carouselColor {
+#profilePageC1, .carouselColor {
   
   text-align: center;
-  margin-bottom: 50px;
-  
+  margin: 25px 10px 10px 0;
 
 }
 
-#profileButton {
+.profileButton {
   background-color: #0D0D0D;
   border-color:#0D0D0D ;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ 
   align-items: center;
+}
+
+.profileButton:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #0D0D0D;
+  border-color: #0D0D0D;
 }
 
  
@@ -162,33 +218,26 @@ div .nav-link {
   
 }
 
-/* #factContainer, h2 {
-  
-  align-self: center;
-} */
-
-#rf {
-  position: absolute;
-  top: 75px;
-  left: 550px;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-#ff {
-  position: absolute;
-  top: 75px;
-  right: 500px;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
 
 .welcome {
   text-align: center;
-  margin-bottom: 75px;
+  margin: 25px 0 25px 0;
 }
 
+#divHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+}
 
+#profileButtonAlign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
 
 
 

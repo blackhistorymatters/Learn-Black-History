@@ -163,6 +163,7 @@ class FactsPage extends React.Component {
                 {this.state.displayedFacts.map((fact, idx) => (
                     
                     <Card style={{ width: '18rem', paddingBottom: '1rem', height: '22rem', overflow: 'auto' }} key={idx} id="factCard">
+                        <Card.Img src="https://www.liberty.edu/champion/wp-content/uploads/2014/02/Untitled-151.jpg" alt="placeholder image" />
                         <Card.Body>
                             <Card.Title>
                                 <h3>{fact.people ? fact.people[0] : this.state.selectedTag}</h3>
@@ -171,7 +172,7 @@ class FactsPage extends React.Component {
                                 {fact.text}
                             </Card.Text>
                         </Card.Body>
-                        <Button onClick={() => this.props.createFactFromFavorite(fact)}>Add to Favorites!</Button>
+                        <Button className="cardButton" onClick={() => this.props.createFactFromFavorite(fact)}>Add to Favorites!</Button>
                     </Card>
                     
                 ))}

@@ -83,8 +83,9 @@ class ProfilePage extends React.Component {
           <div id="profilePageC1">
           
           {/* <Container id="factContainer"> */}
-          <h2 id="rf">Random facts:</h2>
-          <Carousel id="carouselColor" style={{ width: '30rem' }}>
+          <div className="divHeader">
+          <h2>Random facts:</h2>
+          <Carousel className="carouselColor" style={{ width: '30rem' }}>
             {this.props.randomFactsArray.map((fact, idx) => (
               <Carousel.Item key={idx}>
                 <img
@@ -106,14 +107,18 @@ class ProfilePage extends React.Component {
             ))
             }
           </Carousel>
+          </div>
           {/* </Container>  
           <Container id="factContainer"> */}
-          <h2 id="ff">Your favorited facts:</h2>
-          <Carousel id="carouselColor" style={{ width: '30rem' }}>
+          <div className="divHeader">
+          <h2>Your favorited facts:</h2>
+          
+          <Carousel className="carouselColor" style={{ width: '30rem' }}>
             {console.log('User facts array: ', this.props.userFactsArray)}
             {this.props.userFactsArray.map((fact, idx) => (
               <Carousel.Item key={idx}>
                 <img
+                id="carouselImg"
                   className="d-block w-100"
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Ethiopia_%281975%E2%80%931987%29.svg/1280px-Flag_of_Ethiopia_%281975%E2%80%931987%29.svg.png"
     
@@ -125,21 +130,23 @@ class ProfilePage extends React.Component {
                   <p id="cardText">{fact.text}</p>
 
                   <p><a href={fact.source}>Source</a></p>
-                  <Button id="button" onClick={() => this.props.removeFact(fact)}>
-                    Delete fact
+                  <Button className="carouselCardButton" onClick={() => this.props.removeFact(fact)}>
+                    Delete Fact
                   </Button>
-                  <Button id="button" onClick={() => this.handleUpdate(fact)}>
-                    Update button
+                  <Button className="carouselCardButton" onClick={() => this.handleUpdate(fact)}>
+                    Update Fact
                   </Button>
                 </Carousel.Caption>
               </Carousel.Item>
             ))
             }
           </Carousel>
+          </div>
           {/* </Container> */}
         </div>
-        <Button id="profileButton" onClick={this.handleCreateOpen}>Create a new Fact</Button>
-          
+        <div id="profileButtonAlign">
+        <Button className="profileButton" onClick={this.handleCreateOpen}>Create a new Fact</Button>
+        </div>
           {/* UPDATE MODAL */}
           <Modal show={this.state.updateModalShow} onHide={this.handleUpdateClose}>
             <Modal.Header closeButton>
@@ -157,7 +164,7 @@ class ProfilePage extends React.Component {
                     <Form.Label>Source</Form.Label>
                     <Form.Control type="name" placeholder="Enter your source" value={this.state.factToUpdate.source} onChange={this.handleSourceChange} />
                   </Form.Group>
-                  <Button id="button" variant="primary" type="submit">
+                  <Button className="profileButton" variant="primary" type="submit">
                     Submit
                   </Button>
                 </Form>
