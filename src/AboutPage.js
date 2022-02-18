@@ -10,8 +10,9 @@ class AboutPage extends React.Component {
                     <h1>Meet the Creators!</h1>
                     <Container className="aboutPage"  >
 
+
                         <Row sm={2} md={6} lg={10} className="g-4">
-                            <Card style={{ width: '18rem' }} className="aboutCard">
+                            <Card style={{ width: '24rem' }} className="aboutCard">
                                 <Card.Img variant="top" src="https://i.ibb.co/D9TPBmX/aoife.jpg" alt="aoife" />
                                 <Card.Body>
                                     <Card.Title>Aoife Mulligan</Card.Title>
@@ -19,20 +20,20 @@ class AboutPage extends React.Component {
                                         Hi! I'm Aoife and I'm a Software Developer who was formerly a chemistry major. I'm a team player and enjoy working on challenging projects with a useful outcome. I'm passionate about art, biology, technology, science in general, and cooking. Building this app was meaningful to me because black history is a really important part of our nation's history and world history, and I was taught shockingly little about it in school.
                                     </Card.Text>
 
+
                                 </Card.Body>
                             </Card>
-                            <Card style={{ width: '18rem' }} className="aboutCard">
+                            <Card style={{ width: '24rem' }} className="aboutCard">
                                 <Card.Img variant="top" src="https://i.ibb.co/rZCcLtn/tiara.jpg" alt="tiara" />
                                 <Card.Body>
                                     <Card.Title>Tiara Brown</Card.Title>
                                     <Card.Text>
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
+                                    As a former broadcast journalist, I never imagined I would have transferrrable skills applicable to web development, but after studying for a year I can see how those two passions entertwine. I am given the opportunity to help others in a very creative way and use my communication skills to brainstorm ideas and bring them to life. I was very eager to work on this project especially when reflecting on my former education in middle and highschool. I did not get a full scope about the role my ancestors played in setting the stage for other people of color until I left the former educational systems and seeked a higher education and did research on my own. Black people have made just as big of a mark on America as any other race and deserve to be remembered as the spectacular individuals that they were and will continue to be.
                                     </Card.Text>
 
                                 </Card.Body>
                             </Card>
-                            <Card style={{ width: '18rem' }} className="aboutCard">
+                            <Card style={{ width: '24rem' }} className="aboutCard">
                                 <Card.Img variant="top" src="https://i.ibb.co/FsHmsmY/ME.jpg" alt="brian" />
                                 <Card.Body>
                                     <Card.Title>Brian Tarte</Card.Title>
