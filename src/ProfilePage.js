@@ -107,8 +107,7 @@ class ProfilePage extends React.Component {
             }
           </Carousel>
           </div>
-          {/* </Container>  
-          <Container id="factContainer"> */}
+          
           <div className="divHeader">
           <h2>Your favorited facts:</h2>
           
@@ -141,7 +140,7 @@ class ProfilePage extends React.Component {
             }
           </Carousel>
           </div>
-          {/* </Container> */}
+         
         </div>
         <div id="profileButtonAlign">
         <Button className="profileButton" onClick={this.handleCreateOpen}>Create a new Fact</Button>

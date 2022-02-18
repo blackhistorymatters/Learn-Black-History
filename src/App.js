@@ -1,13 +1,12 @@
 import React from 'react';
 import { withAuth0 } from '@auth0/auth0-react';
-// import LogoutButton from './LogoutButton';
+
 
 import Header from './Header';
 import Footer from './Footer';
 import ProfilePage from './ProfilePage';
 import AboutPage from './AboutPage';
 import LandingPage from './LandingPage';
-// import LoginButton from './LoginButton';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -17,7 +16,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  // Redirect
 } from "react-router-dom";
 import FactsPage from './FactsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -174,12 +172,6 @@ class App extends React.Component {
     console.log('randomFactsArray: ', this.state.randomFactsArray)
     this.setState({ randomFact: this.state.randomFactsArray[Math.floor(Math.random() * this.state.randomFactsArray.length)] })
 
-    // if (this.props.auth0.isAuthenticated) {
-
-    //   const res = await this.props.auth0.getIdTokenClaims();
-    //   const jwt = res.__raw;
-    //   console.log("jwt: ", jwt);
-    // }
   }
 
   loginHandler = (user) => {
@@ -213,11 +205,9 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/'>
               <LandingPage randomFactsArray={this.state.randomFactsArray} generateRandomFact={this.generateRandomFact} randomFact={this.state.randomFact} />
-              {/* <LoginButton /> */}
-              {/* <LogoutButton /> */}
             </Route>
             <Route exact path="/profile" >
-              {/* {this.state.user ? <ProfilePage user={this.state.user} /> : <Redirect to="/" />} */}
+             
               <ProfilePage user={this.state.user} randomFactsArray={this.state.randomFactsArray} createFact={this.createFact} getUserFacts={this.getUserFacts} removeFact={this.removeFact} userFactsArray={this.state.userFactsArray} updateFact={this.updateFact} />
 
             </Route>
