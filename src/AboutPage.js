@@ -12,7 +12,7 @@ class AboutPage extends React.Component {
 
 
                         <Row sm={2} md={6} lg={10} className="g-4">
-                            <Card style={{ width: '18rem' }} className="aboutCard">
+                            <Card style={{ width: '24rem' }} className="aboutCard">
                                 <Card.Img variant="top" src="https://i.ibb.co/D9TPBmX/aoife.jpg" alt="aoife" />
                                 <Card.Body>
                                     <Card.Title>Aoife Mulligan</Card.Title>
@@ -23,7 +23,7 @@ class AboutPage extends React.Component {
 
                                 </Card.Body>
                             </Card>
-                            <Card style={{ width: '18rem' }} className="aboutCard">
+                            <Card style={{ width: '24rem' }} className="aboutCard">
                                 <Card.Img variant="top" src="https://i.ibb.co/rZCcLtn/tiara.jpg" alt="tiara" />
                                 <Card.Body>
                                     <Card.Title>Tiara Brown</Card.Title>
@@ -33,7 +33,7 @@ class AboutPage extends React.Component {
 
                                 </Card.Body>
                             </Card>
-                            <Card style={{ width: '18rem' }} className="aboutCard">
+                            <Card style={{ width: '24rem' }} className="aboutCard">
                                 <Card.Img variant="top" src="https://i.ibb.co/FsHmsmY/ME.jpg" alt="brian" />
                                 <Card.Body>
                                     <Card.Title>Brian Tarte</Card.Title>
