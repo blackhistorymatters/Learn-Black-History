@@ -46,7 +46,7 @@ class AboutPage extends React.Component {
                         </Row>
                     </Container>
                 </div>
-                {/* TODO: add stuff from the wireframe, above is filler */}
+                
             </>
         );
     }
