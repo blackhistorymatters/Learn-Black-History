@@ -144,24 +144,7 @@ class FactsPage extends React.Component {
                 ))}
                 </Row>
                 </Container>
-                {
-                //this.state.displayedFacts.map((tagName, idx) => (
-
-
-
-                //     <Card style={{ width: '18rem' }} key={idx}>
-                //         <Card.Body>
-                //             <Card.Title>
-                //                 <h3>{this.state.selectedTag}</h3>
-                //             </Card.Title>
-                //             <Card.Text>
-                //                 {tagName.text}
-                //             </Card.Text>
-                //         </Card.Body>
-                //         <Button>Add to Favorites!</Button>
-                //     </Card>
-                // ))
-                }
+               
 
             </>
 

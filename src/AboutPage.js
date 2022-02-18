@@ -27,8 +27,7 @@ class AboutPage extends React.Component {
           <Card.Body>
             <Card.Title>Tiara Brown</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
+            As a former broadcast journalist, I never imagined I would have transferrrable skills applicable to web development, but after studying for a year I can see how those two passions entertwine. I am given the opportunity to help others in a very creative way and use my communication skills to brainstorm ideas and bring them to life. I was very eager to work on this project especially when reflecting on my former education in middle and highschool. I did not get a full scope about the role my ancestors played in setting the stage for other people of color until I left the former educational systems and seeked a higher education and did research on my own. Black people have made just as big of a mark on America as any other race and deserve to be remembered as the spectacular individuals that they were and will continue to be.
             </Card.Text>
 
           </Card.Body>

@@ -198,7 +198,7 @@ class ProfilePage extends React.Component {
               </Modal.Body>
             </Modal.Header>
             <Modal.Footer>
-              <Button variant="info" onClick={this.handleCreateClose}>Close</Button>
+              <Button className="carouselCardButton" variant="info" onClick={this.handleCreateClose}>Close</Button>
             </Modal.Footer>
           </Modal>
         </>

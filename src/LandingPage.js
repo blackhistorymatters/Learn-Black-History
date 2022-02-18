@@ -27,7 +27,7 @@ class LandingPage extends React.Component {
                         </Card.Body>
                     </Card>
                     <button className="defaultButton" onClick={this.props.generateRandomFact}><p id="landingPad">Generate New Fact</p></button>
-                    <p id="pwidth">Welcome to Learn Black History, an app you can use to learn more about Black History! Feel free to generate random facts to get a feel for the app, or if you choose to do so, sign up with us by clicking "Login" at the top of the page. Doing so will allow you to access our entire fact database, save your favorite facts to your profile, update facts in our database, or even contribute to the database!</p>
+                    <p id="pwidth">Welcome to the site that takes a holistic approach to educating users about Black History! Feel free to generate random facts to get a feel for the app, or sign up with us by clicking "Login" at the top of the page. Doing so allows you to access all features of this website and use Learn Black History as an educational resource.</p>
                 </Container>
                 
             </>
